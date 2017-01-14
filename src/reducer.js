@@ -10,9 +10,12 @@ export const fetchForecastDataReducer = (state = Map({forecast: List()}), {type,
       return state;
    }
 
-   if (type === ActionTypes.FETCH_FORECAST_DATA && payload.query.results) {
-      const forecast = payload.query.results.channel.item.forecast;
-      return state.merge({forecast: fromJS(forecast)});
+   if (type === ActionTypes.FETCH_FORECAST_DATA) {
+      if (payload.query.results) {
+         const forecast = payload.query.results.channel.item.forecast;
+         return state.merge({forecast: fromJS(forecast)});
+      }
+      return Map({forecast: List()});
    }
 
    return state;

@@ -22,7 +22,9 @@ You will also see any lint errors in the console.
 - Immutable as the representation of state
 - react-virtualized as the library of data grid
 - isomorphic-fetch and ES6 new promise API to access yahoo weather api
-- monitoring redux store through reduxDevTools extension
+- timeout if it takes too long to get a response from the weather api
+- reduxDevTools browser extension as the tool to monitor redux store
+- log actions to the console
 
 ## TODO
 - Optimize CSS code
