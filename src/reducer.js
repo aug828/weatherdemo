@@ -1,10 +1,10 @@
 /**
  * Created by wrui on 1/12/17.
  */
-import {Map, List, fromJS} from 'immutable';
 import * as ActionTypes from './actions/ActionTypes';
+import initialState from './constants/initialState';
 
-export const fetchForecastDataReducer = (state = Map({forecast: List()}), {type, payload, error}) => {
+export const fetchForecastDataReducer = (state = initialState, {type, payload, error}) => {
    if (error) {
       console.log(error);
       return state;
@@ -12,10 +12,10 @@ export const fetchForecastDataReducer = (state = Map({forecast: List()}), {type,
 
    if (type === ActionTypes.FETCH_FORECAST_DATA) {
       if (payload.query.results) {
-         const forecast = payload.query.results.channel.item.forecast;
-         return state.merge({forecast: fromJS(forecast)});
+         const {query: {results: {channel: {units, location, wind, item: {forecast, condition}}}}} = payload;
+         return state.merge({location, units, condition, wind, forecast});
       }
-      return Map({forecast: List()});
+      return initialState;
    }
 
    return state;

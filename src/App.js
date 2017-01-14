@@ -6,7 +6,7 @@ import './style/App.css';
 
 class App extends Component {
    render() {
-      const {dispatch, forecast} = this.props;
+      const {location, units, condition, wind, forecast, dispatch} = this.props;
 
       return (
          <div className="App">
@@ -14,7 +14,7 @@ class App extends Component {
                <img src={logo} className="App-logo" alt="logo" />
                <h2>Welcome to Weather Forecast Demo</h2>
             </div>
-            <Forecast {...{forecast, dispatch}}/>
+            <Forecast {...{location, units, condition, wind, forecast, dispatch}}/>
          </div>
       );
    }

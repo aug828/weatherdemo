@@ -1,0 +1,46 @@
+{
+  "location":{
+    "city":"Chicago",
+    "country":"United States",
+    "region":" IL"
+  },
+
+  "units": {
+    "distance":"mi",
+    "pressure":"in",
+    "speed":"mph",
+    "temperature":"F"
+  },
+
+  "wind":{
+    "chill":"25",
+    "direction":"90",
+    "speed":"14"
+  },
+
+  "condition": {
+    "code":"26",
+    "date":"Fri, 13 Jan 2017 09:00 PM CST",
+    "temp":"33",
+    "text":"Cloudy"
+  },
+
+  "forecast": [
+   {
+      "code": "30",
+      "date": "19 Jan 2017",
+      "day": "Thu",
+      "high": "5",
+      "low": "1",
+      "text": "Partly Cloudy"
+    },
+   {
+      "code": "28",
+      "date": "20 Jan 2017",
+      "day": "Fri",
+      "high": "0",
+      "low": "-10",
+      "text": "Mostly Cloudy"
+    }
+ ]
+}

@@ -18,8 +18,18 @@
   font-size: large;
 }
 
-.ReactVirtualized__Table {
+.summary {
   padding-top: 20px;
+}
+
+.selectCity {
+  padding-top: 20px;
+}
+
+.forecast {
+  padding-top: 50px;
+  padding-left: 20px;
+  align-content: left;
 }
 
 @keyframes App-logo-spin {
