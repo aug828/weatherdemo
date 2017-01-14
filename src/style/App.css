@@ -18,8 +18,8 @@
   font-size: large;
 }
 
-.ForecastSection {
-  text-align: center;
+.ReactVirtualized__Table {
+  padding-top: 20px;
 }
 
 @keyframes App-logo-spin {
