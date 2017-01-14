@@ -54,7 +54,7 @@ export default class extends Component {
                   <Column label='High' dataKey='high' width={100}/>
                   <Column label='Low' dataKey='low' width={100}/>
                   <Column label='Description' dataKey='text' width={300}/>
-               </Table> : <p>Sorry, Yahoo weather api doesn't return anything.</p>
+               </Table> : <p>Sorry, Yahoo weather api did not return anything.</p>
             }
          </div>
       );
